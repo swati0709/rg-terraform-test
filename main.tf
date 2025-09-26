@@ -39,12 +39,11 @@ module "sa_lrs_cc" {
 
   account_replication_type      = "LRS"
   public_network_access_enabled = false
-  allow_blob_public_access      = false
 
   env = var.env
 }
 
-# Storage Account RA-GRS public access enabled
+# Storage Account RA-GRS in Canada East, public access enabled
 module "sa_ragrs_ce" {
   source              = "./modules/storage_account"
   name                = "${var.project_prefix}saragrsce"
@@ -53,7 +52,6 @@ module "sa_ragrs_ce" {
 
   account_replication_type      = "RAGRS"
   public_network_access_enabled = true
-  allow_blob_public_access      = true
 
   env = var.env
 }

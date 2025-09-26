@@ -20,11 +20,6 @@ variable "public_network_access_enabled" {
   default = false
 }
 
-variable "allow_blob_public_access" {
-  type    = bool
-  default = false
-}
-
 variable "env" {
   type = string
 }

@@ -25,9 +25,10 @@ variable "sku_name" {
   default = "standard"
 }
 
-variable "enable_rbac_authorization" {
-  type    = bool
-  default = true
+variable "rbac_authorization_enabled" {
+  description = "Enable RBAC authorization for Key Vault"
+  type        = bool
+  default     = true
 }
 
 variable "purge_protection_enabled" {
